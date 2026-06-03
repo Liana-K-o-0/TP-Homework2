@@ -18,7 +18,7 @@ class ShoppingList:
         for item in self._items:
             if item[1] != title:
                 new_items.append(item)
-        _items = new_items
+        self._items = new_items
 
     def get_list(self):
         totals_dict = {}

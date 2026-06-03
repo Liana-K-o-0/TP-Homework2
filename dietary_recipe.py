@@ -10,7 +10,7 @@ class DietaryRecipe(Recipe):
     
     def scale(self,ratio:float):
         if not self.is_valid_ratio(ratio):
-            raise ValueError("Коэффициент масштабирования")
+            raise ValueError("Коэффициент масштабирования должен быть положительным")
         scaled_recipe = super().scale(ratio)
         return DietaryRecipe(scaled_recipe.title,self.diet_type,scaled_recipe.ingredients)
     
