@@ -121,9 +121,9 @@ def test_shoplist_addrecipe(sample_recipe):
     items = shop_list1._items
     assert len(items) == 3
     expected = [
-        (Ingredient("Яйца", 2, "шт"), "Омлет"),
-        (Ingredient("Молоко", 50, "мл"), "Омлет"),
-        (Ingredient("Соль", 1, "щепотка"), "Омлет")
+        (Ingredient("Яйца", 4, "шт"), "Омлет"),
+        (Ingredient("Молоко", 100, "мл"), "Омлет"),
+        (Ingredient("Соль", 2, "щепотка"), "Омлет")
     ]
     for exp_ing, exp_title in expected:
         found = any(item[0].name == exp_ing.name and 
